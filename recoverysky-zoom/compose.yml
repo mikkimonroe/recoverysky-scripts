@@ -1,0 +1,4 @@
+include:
+  - recoverysky-zoom-api/compose.yml
+  - recoverysky-zoom-app/compose.yml
+  - recoverysky-zoom-proxy/compose.yml

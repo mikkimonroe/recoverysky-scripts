@@ -1,0 +1,6 @@
+services:
+  recoverysky-zoom-app:
+    container_name: recoverysky-zoom-app
+    image: 306057522130.dkr.ecr.us-east-1.amazonaws.com/recoverysky/recoverysky-zoom-app:latest
+    restart: always
+    command: ["node", "./server/server", "start", "--secret", "RecoverySky/Zoom/Prod", "--log-name-reset", "--log-http"]

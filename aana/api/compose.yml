@@ -1,0 +1,8 @@
+services:
+  aana-api:
+    image: 306057522130.dkr.ecr.us-east-1.amazonaws.com/aana/aana-api:latest
+
+    restart: always
+    ports:
+      - "4010:4010"
+  # command: ["node", "dist/index.js", "--stats", "--cloud"]

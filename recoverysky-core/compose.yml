@@ -1,0 +1,9 @@
+include:
+  - recoverysky-api/compose.yml
+  - recoverysky-db/compose.yml
+  - recoverysky-proxy/compose.yml
+  
+  - ../recoverysky-zoom/recoverysky-zoom-api/compose.yml
+  - ../recoverysky-zoom/recoverysky-zoom-app/compose.yml
+
+  - ../aana/api/compose.yml

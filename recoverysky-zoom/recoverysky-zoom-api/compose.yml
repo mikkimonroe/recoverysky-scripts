@@ -1,0 +1,15 @@
+services:
+  recoverysky-zoom-api:
+    container_name: recoverysky-zoom-api
+    image: 306057522130.dkr.ecr.us-east-1.amazonaws.com/recoverysky/recoverysky-zoom-api:latest
+    restart: always
+    command: ["node", "./server/server", "start", "--secret", "RecoverySky/Zoom/Prod", "--log-name-reset", "--log-http"]
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - '$REDIS_PORT:$REDIS_PORT'
+    volumes:
+      - ./redis:/data

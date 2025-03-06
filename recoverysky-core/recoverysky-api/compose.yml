@@ -1,0 +1,6 @@
+services:
+  recoverysky-api:
+    container_name: recoverysky-api
+    image: 306057522130.dkr.ecr.us-east-1.amazonaws.com/recoverysky/recoverysky-api:latest
+    restart: always
+    command: ["node", "./dist/server", "start", "--secret", "RecoverySky/Core/Prod", "--log-name-reset", "--log-http"]
